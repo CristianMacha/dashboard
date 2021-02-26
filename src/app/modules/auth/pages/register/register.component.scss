@@ -1,0 +1,47 @@
+.content {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.content-auth {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin: 10px;
+}
+
+.card-auth {
+    width: 500px;
+    height: auto;
+}
+
+.form-auth {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    float: right;
+}
+
+p {
+    float: left;
+    color: #3f51b5;
+    cursor: pointer;
+}
+
+.mat-card-title{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+h1 {
+    text-align: center;
+    cursor: pointer;
+    color: #3f51b5;
+}

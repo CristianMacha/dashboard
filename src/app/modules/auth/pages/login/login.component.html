@@ -1,0 +1,30 @@
+<div class="content">
+    <div class="content-auth">
+        <mat-card>
+            <mat-card-content>
+                <h1 (click)="goToHome()">Academy</h1>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="card-auth">
+            <mat-card-header>
+                <mat-card-title>Login</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <form class="form-auth">
+                    <mat-form-field>
+                        <mat-label>Correo</mat-label>
+                        <input matInput autocomplete="off">
+                        <mat-icon matSuffix>email</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput type="password">
+                        <mat-icon matSuffix>lock</mat-icon>
+                    </mat-form-field>
+                </form>
+            </mat-card-content>
+                <p (click)="goToRegister()">¿No tienes cuenta?</p>
+                <button mat-raised-button color="primary" (click)="login()">Ingresar</button>
+        </mat-card>
+    </div>
+</div>
