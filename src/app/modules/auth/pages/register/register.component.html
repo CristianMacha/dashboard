@@ -10,26 +10,32 @@
                 <mat-card-title>Registro</mat-card-title>
             </mat-card-header>
             <mat-card-content>
-                <form class="form-auth">
+                <form class="form-auth" [formGroup]="signupForm">
                     <mat-form-field>
                         <mat-label>Correo</mat-label>
-                        <input matInput autocomplete="off">
+                        <input matInput autocomplete="off" formControlName="mail">
                         <mat-icon matSuffix>email</mat-icon>
                     </mat-form-field>
                     <mat-form-field>
-                        <mat-label>Contraseña</mat-label>
-                        <input matInput type="password">
-                        <mat-icon matSuffix>lock</mat-icon>
+                        <mat-label>Matricula</mat-label>
+                        <input matInput formControlName="matricula">
+                        <mat-icon matSuffix>person</mat-icon>
                     </mat-form-field>
                     <mat-form-field>
-                        <mat-label>Matricula</mat-label>
-                        <input matInput>
+                        <mat-label>Nombres</mat-label>
+                        <input matInput formControlName="name">
                         <mat-icon matSuffix>person</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput type="password" formControlName="password">
+                        <mat-icon matSuffix>lock</mat-icon>
                     </mat-form-field>
                 </form>
             </mat-card-content>
             <p (click)="goToLogin()">¿Ya tienes cuenta?</p>
-            <button mat-raised-button color="primary" (click)="goToLogin()">Registrarme</button>
+            <button mat-raised-button color="primary" [disabled]="signupForm.invalid"
+                (click)="registerUser()">Registrarme</button>
         </mat-card>
     </div>
 </div>
